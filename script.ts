@@ -1,22 +1,22 @@
-function showMyName(name) {
+function showMyName(name: string): void {
   console.log(name)
 }
 
 showMyName('John')
 
-function square(a) {
+function square(a: number): number {
   return a * a
 }
 
 square(10)
 
-function sum(title, ...numbers) {
+function sum(title: string, ...numbers: number[]): string | number {
   return title + ' = ' + numbers.reduce((sum, num) => sum + num, 0)
 }
 
 sum('Numbers', 1, 6, 10)
 
-const executeFunc = func => {
+const executeFunc = (func: (title: string, age: number, hobbies: string[]) => void): void => {
   const title = 'Lorem Ipsum'
   func(title, 24, ['Sport', 'Movies'])
 }
